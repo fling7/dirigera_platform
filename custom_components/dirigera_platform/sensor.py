@@ -73,7 +73,7 @@ class ikea_vindstyrka_device:
     
     def update(self):
         if self._updated_at is None or \
-            (datetime.datetime.now() - self._updated_at).total_seconds() > 30:
+            (datetime.datetime.now() - self._updated_at).total_seconds() > 1:
             try:
                 self._json_data = self._hub.get_environment_sensor_by_id(self._json_data.id)
                 self._updated_at = datetime.datetime.now()
