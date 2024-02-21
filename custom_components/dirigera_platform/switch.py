@@ -54,7 +54,7 @@ class ikea_outlet(SwitchEntity):
     def device_info(self) -> DeviceInfo:
         return DeviceInfo(
             identifiers={("dirigera_platform",self._json_data.id)},
-            name = self._json_data.attributes.custom_name,
+            name = "Name Test",
             manufacturer = self._json_data.attributes.manufacturer,
             model=self._json_data.attributes.model ,
             sw_version=self._json_data.attributes.firmware_version
